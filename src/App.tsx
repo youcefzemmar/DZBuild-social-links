@@ -1,4 +1,4 @@
-import { useState, useEffect } from 'react'
+import { useState, useEffect, useRef } from 'react'
 import {
   Facebook,
   Instagram,
@@ -9,6 +9,7 @@ import {
   Github,
   Send
 } from 'lucide-react'
+import { initProtection } from './protection'
 
 interface SocialLink {
   name: string
@@ -20,16 +21,36 @@ interface SocialLink {
 function App() {
   const [isVisible, setIsVisible] = useState(false)
   const [mousePosition, setMousePosition] = useState({ x: 0, y: 0 })
+  const footerRef = useRef<HTMLElement>(null)
+  const [_0x4a3b, _0x5c2d] = useState(true)
 
   useEffect(() => {
     setIsVisible(true)
+    initProtection()
 
     const handleMouseMove = (e: MouseEvent) => {
       setMousePosition({ x: e.clientX, y: e.clientY })
     }
 
     window.addEventListener('mousemove', handleMouseMove)
-    return () => window.removeEventListener('mousemove', handleMouseMove)
+
+    const _0x3f8e = atob('ZHpidWlsZC5jb20=')
+    const _0x2b9c = setInterval(() => {
+      if (footerRef.current) {
+        const _0x1e7a = footerRef.current.textContent || ''
+        const _0x6d4f = atob('ZHpidWlsZA==')
+        if (!_0x1e7a.toLowerCase().includes(_0x6d4f)) {
+          console.warn('\x1b[31m%s\x1b[0m', 'Attribution required')
+          document.body.style.opacity = '0.3'
+          setTimeout(() => window.location.href = `https://${_0x3f8e}`, 2000)
+        }
+      }
+    }, 5000)
+
+    return () => {
+      window.removeEventListener('mousemove', handleMouseMove)
+      clearInterval(_0x2b9c)
+    }
   }, [])
 
   const socialLinks: SocialLink[] = [
@@ -212,18 +233,32 @@ function App() {
             </div>
           </nav>
 
-          <footer className="mt-16 text-center space-y-4">
+          <footer ref={footerRef} className="mt-16 text-center space-y-4" data-integrity="dzb-2024">
             <div className="flex items-center justify-center gap-3">
               <div className="h-px w-16 bg-gradient-to-r from-transparent via-yellow-500/50 to-transparent" aria-hidden="true" />
-              <p className="text-gray-500 text-sm">
-                Powered by <span className="text-yellow-500 font-semibold">dzbuild</span>
+              <p className="text-gray-500 text-sm select-none">
+                Powered by{' '}
+                <a
+                  href="https://dzbuild.com"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="text-yellow-500 font-semibold hover:text-yellow-400 transition-colors duration-300 hover:underline cursor-pointer"
+                  data-source="dzb"
+                  style={{ pointerEvents: 'auto' }}
+                >
+                  dzbuild
+                </a>
               </p>
               <div className="h-px w-16 bg-gradient-to-r from-transparent via-yellow-500/50 to-transparent" aria-hidden="true" />
             </div>
 
             <p className="text-gray-600 text-xs">
-              Building the future of e-commerce
+              Building the future of algerian e-commerce
             </p>
+
+            <div style={{ position: 'absolute', left: '-9999px', opacity: 0, pointerEvents: 'none' }} aria-hidden="true">
+              {atob('UG93ZXJlZCBieSBkemJ1aWxkIC0gaHR0cHM6Ly9kemJ1aWxkLmNvbQ==')}
+            </div>
           </footer>
         </article>
       </div>

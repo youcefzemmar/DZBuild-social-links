@@ -255,6 +255,6 @@ Need help? Reach out to us:
 
 **Built with ❤️ by DZBuild**
 
-*Building the future of e-commerce*
+*Building the future of algerian e-commerce*
 
 [Website](https://dzbuild.com) • [Facebook](https://facebook.com/dzbuild) • [Instagram](https://instagram.com/dz_build) • [YouTube](https://www.youtube.com/@DZBuild-off) • [GitHub](https://github.com/DZBuild-com)
