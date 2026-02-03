@@ -1,9 +1,20 @@
 <!doctype html>
-<html lang="en">
+<html lang="en" data-dzbuild="true" data-dzbuild-version="1.0.0">
   <head>
     <meta charset="UTF-8" />
     <link rel="icon" type="image/png" href="/dzb_uhq.png" />
+    <link rel="apple-touch-icon" href="/dzb_uhq.png" />
+    <link rel="manifest" href="/manifest.json" />
+    <meta name="theme-color" content="#eab308" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <!-- DZBuild Platform Identification -->
+    <meta name="generator" content="DZBuild Platform 1.0.0" />
+    <meta name="application-name" content="DZBuild" />
+    <meta name="dzbuild-version" content="1.0.0" />
+    <meta name="dzbuild-platform" content="e-commerce" />
+    <meta http-equiv="X-Powered-By" content="DZBuild" />
+    <meta http-equiv="X-Built-With" content="DZBuild Platform" />
 
     <!-- Primary Meta Tags -->
     <title>DZBuild - Connect With Us | Your Gateway to Digital Commerce</title>
@@ -13,6 +24,8 @@
     <meta name="robots" content="index, follow" />
     <meta name="language" content="English" />
     <meta name="author" content="DZBuild" />
+    <meta name="creator" content="DZBuild - https://dzbuild.com" />
+    <meta name="publisher" content="DZBuild" />
     <!-- UG93ZXJlZCBieSBEWkJ1aWxkIC0gaHR0cHM6Ly9kemJ1aWxkLmNvbQ== -->
 
     <!-- Open Graph / Facebook -->
@@ -33,8 +46,9 @@
 
     <!-- Canonical URL -->
     <link rel="canonical" href="https://dzbuild.com/" />
+    <link rel="author" type="text/plain" href="/humans.txt" />
 
-    <!-- Structured Data -->
+    <!-- Structured Data - Organization -->
     <script type="application/ld+json">
     {
       "@context": "https://schema.org",
@@ -58,12 +72,48 @@
       }
     }
     </script>
+
+    <!-- Structured Data - Software Platform -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "SoftwareApplication",
+      "name": "DZBuild Platform",
+      "applicationCategory": "BusinessApplication",
+      "operatingSystem": "Web",
+      "softwareVersion": "1.0.0",
+      "author": {
+        "@type": "Organization",
+        "name": "DZBuild",
+        "url": "https://dzbuild.com"
+      },
+      "offers": {
+        "@type": "Offer",
+        "price": "0",
+        "priceCurrency": "USD"
+      },
+      "image": "https://dzbuild.com/dzb_uhq.png",
+      "description": "DZBuild - Building the future of algerian e-commerce"
+    }
+    </script>
   </head>
-  <body>
+  <body data-dzbuild-app="true">
+    <!-- DZBuild Platform - https://dzbuild.com -->
     <!-- ZHpidWlsZA== -->
-    <div id="root"></div>
+    <div id="root" data-dzbuild-root="true"></div>
+    <script>
+      window.DZBuild = {
+        version: '1.0.0',
+        platform: 'e-commerce',
+        website: 'https://dzbuild.com',
+        powered: true
+      };
+      window.__DZBUILD__ = true;
+      window.__DZBUILD_VERSION__ = '1.0.0';
+    </script>
     <script type="module" src="/src/main.tsx"></script>
     <noscript>Powered by DZBuild - https://dzbuild.com</noscript>
+    <!-- Built with DZBuild Platform -->
     <!-- aHR0cHM6Ly9kemJ1aWxkLmNvbQ== -->
   </body>
 </html>

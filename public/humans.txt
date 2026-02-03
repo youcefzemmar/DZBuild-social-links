@@ -1,0 +1,15 @@
+/* TEAM */
+Name: DZBuild
+Site: https://dzbuild.com
+Location: Algeria
+
+/* THANKS */
+Powered by DZBuild Platform
+Building the future of algerian e-commerce
+
+/* SITE */
+Last update: 2024
+Standards: HTML5, CSS3, ES6+
+Platform: DZBuild 1.0.0
+Framework: React
+Styling: Tailwind CSS

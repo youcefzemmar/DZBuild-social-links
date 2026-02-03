@@ -1,3 +1,19 @@
+declare global {
+  interface Window {
+    DZBuild: {
+      version: string
+      platform: string
+      website: string
+      powered: boolean
+      initialized: boolean
+      logo: string
+    }
+    __DZBUILD__: boolean
+    __DZBUILD_VERSION__: string
+    __dzb__: string
+  }
+}
+
 export const _0x9f2a = () => {
   const _0x7e3b = atob('ZHpidWlsZA==')
   const _0x4c1d = atob('aHR0cHM6Ly9kemJ1aWxkLmNvbQ==')
@@ -8,6 +24,25 @@ export const _0x9f2a = () => {
       writable: false,
       configurable: false,
       enumerable: false
+    })
+
+    if (window.DZBuild) {
+      window.DZBuild.initialized = true
+      window.DZBuild.logo = '/dzb_uhq.png'
+    }
+
+    Object.defineProperty(window, 'DZBuild', {
+      value: {
+        ...window.DZBuild,
+        version: '1.0.0',
+        platform: 'e-commerce',
+        website: _0x4c1d,
+        powered: true,
+        initialized: true,
+        logo: '/dzb_uhq.png'
+      },
+      writable: false,
+      configurable: false
     })
 
     const _0x8a5e = new MutationObserver(() => {
