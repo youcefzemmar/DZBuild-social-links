@@ -253,7 +253,7 @@ Need help? Reach out to us:
 
 ---
 
-**Built with ❤️ by DZBuild**
+**Built by DZBuild**
 
 *Building the future of algerian e-commerce*
 
